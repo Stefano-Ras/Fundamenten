@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/stylesheet.css" />
+    </head>
+    <body>
+        <ul id="navbar">
+            <li onclick="window.open('index.html', '_self'); return false;">Thuispagina</li>
+            <li onclick="window.open('#', '_self'); return false;">Calculator</li>
+            <li onclick="window.open('contact.html', '_self'); return false;">Contact</li>
+            <li onclick="window.open('calculator.html', '_self'); return false;">Over ons</li>
+        </ul>
+        <button id="menubtn" onclick="openmenu()">☰ Menu</button>
+        <button id="menubtn2" onclick="sluitmenu()">X Menu</button>
+        <section class="content calculator">
+            <div class="input">
+                <div class="bmiinput">
+                    <h3>BMI uitrekenen</h3>
+                    <span>BMI (Body Mass Index) laat zien of iemands gewicht gezond is voor hun lengte.</span><br><br>
+                    <form class="bmiform">
+                        <input type="number" id="lengte" name="lengte" required placeholder="Lengte (cm)">
+                        <input type="number" id="gewicht" name="gewicht" required placeholder="Gewicht (kg)">
+                    </form>
+                </div>
+                <div class="bmrinput">
+                    <h3>BMR uitrekenen</h3>
+                    <span>BMR (Basal Metabolic Rate) staat voor de hoeveelheid calorieën die het lichaam
+                        van nature gebruikt.<br> In combinatie met de onderstaande workout intensitie
+                        worden de calorieën die dagelijks verbrand worden gemeten.<br><br>
+                        Voor een <i>deficit</i> moet een man 2500 calorieën verbranden en een vrouw 2000.<br><br>
+                    </span>
+                    <from class="bmrform">
+                        <label for="geslacht">Geslacht:</label>
+                        <select name="geslacht" id="geslacht">
+                            <option class="dropdownoptie" value="man">Man</option>
+                            <option class="dropdownoptie" value="vrouw">Vrouw</option>
+                        </select>
+                        <label for="leeftijd">Leeftijd:</label>
+                        <input type="number" id="leeftijd" name="leeftijd" required placeholder="18" min="18" max="99"><br><br>
+                    </from>
+                </div>
+                <div class="sportinput">
+                    <h3>Intensiteit workout</h3>
+                    <form class="sportform">
+                        <input type="range" id="intensiteit" name="intensiteit" list="tickmarks" min="0" max="100" step="25" />
+                        <datalist id="tickmarks">
+                            <option value="0" label="Zeer intens"></option>
+                            <option value="25" label="Intens"></option>
+                            <option value="50" label="Matig"></option>
+                            <option value="75" label="Licht"></option>
+                            <option value="100" label="Beginner"></option>
+                        </datalist>
+                    </form>
+                </div>
+            </div>
+            <div class="output">
+                <h3>BMI</h3>
+                <span id="bmiresult">Het resultaat van de ingevoerde BMI-waardes wordt hier weergegeven.</span>
+                <h3>Calorieën verbrand</h3>
+                <span id="calorieën">Hier worden de resultaten met betrekking tot BMR en sporten weergegeven.</span>
+                <span id="deficit"></span><br><br>
+                <button id="herstart" onclick="herstart()">Verwijder gegevens</button>
+            </div>
+        </section>
+        <div class="footer">
+            <div class="footerposition">
+                <div class="footerinfo">
+                    <h4>Extra informatie</h4>
+                    <ul>
+                        <li>Algemene voorwaarden</li>
+                        <li>Disclaimer</li>
+                        <li>Privacybeleid</li>
+                    </ul>
+                </div>
+                <div class="footercontact">
+                    <h4>Contactinfo</h4>
+                    <ul>
+                        <li>01-23456789</li>
+                        <li>sport@school.nl</li>
+                        <li>Tw/FB</li>
+                    </ul>
+                </div>
+                <div class="footerlocatie">
+                    <h4>Locatie</h4>
+                    <ul>
+                        <li>Heerhugowaard</li>
+                        <li>Stationsplein 01</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>
+            function openmenu(){
+                document.getElementById("navbar").style.width = "50%";
+                document.getElementById("menubtn2").style.visibility = "visible";
+            }
+
+            function sluitmenu(){
+                document.getElementById("navbar").style.width = "0";
+                document.getElementById("menubtn2").style.visibility = "hidden";
+            }
+            
+            var lengteinput = document.getElementById('lengte');
+            var gewichtinput = document.getElementById('gewicht');
+            var geslachtinput = document.getElementById('geslacht');
+            var leeftijdinput = document.getElementById('leeftijd');
+            var intensiteitinput = document.getElementById('intensiteit');
+            
+            /*
+            var gegevensinput = {
+                lengte: lengteinput.value,
+                gewicht: gewichtinput.value,
+                geslacht: geslachtinput.value,
+                leeftijd: leeftijdinput.value,
+                intensiteit: intensiteitinput.value
+            }
+            localStorage.setItem('gegevens', JSON.stringify(gegevensinput));
+            */
+            
+            /*
+            var lengte = localStorage.setItem("Lengte", lengteinput.value);
+            localStorage.setItem("Gewicht", gewichtinput.value);
+            localStorage.setItem("Geslacht", geslachtinput.value);
+            localStorage.setItem("Leeftijd", leeftijdinput.value);
+            localStorage.setItem("Intensiteit", intensiteitinput.value);
+            */
+            
+            document.addEventListener("change", function() {
+            
+            function storage(){
+                var lengte = document.getElementById("lengte").value;
+                var gewicht = document.getElementById("gewicht").value;
+                var geslacht = document.getElementById("geslacht").value;
+                var leeftijd = document.getElementById("leeftijd").value;
+                var intensiteit = document.getElementById("intensiteit").value;
+            }
+            
+            /*
+            JSON.parse(localStorage.getItem('gegevens'));
+            console.log(lengte);
+            */
+            
+            var lengte = lengteinput.value;
+            var gewicht = gewichtinput.value;
+            var geslacht = geslachtinput.value;
+            var leeftijd = leeftijdinput.value;
+            var intensiteit = intensiteitinput.value;
+            
+            /*                     
+            var lengte = JSON.parse(localStorage.getItem("Lengte"));
+            var gewicht = localStorage.getItem("Gewicht");
+            var geslacht = localStorage.getItem("Geslacht");
+            var leeftijd = localStorage.getItem("Leefijd");
+            var intensiteit = localStorage.getItem("Intensiteit");
+            */
+           
+            var bmi = gewicht/Math.pow(lengte, 2)*10000;
+            
+            if(bmi >= 18.5, bmi <= 24.9) {
+                    document.getElementById("bmiresult").innerHTML = "Uw heeft een BMI van " + Math.round(bmi * 10) / 10 + ", dit is een gezond niveau.";
+                } else if(bmi < 18.5) {
+                    document.getElementById("bmiresult").innerHTML = "Uw heeft een BMI van " + Math.round(bmi * 10) / 10; + ", dit is te laag.";
+                } else if (bmi >= 25, bmi <=29.9) {
+                    document.getElementById("bmiresult").innerHTML = "Uw heeft een BMI van " + Math.round(bmi * 10) / 10 + ", dit is te hoog.";
+                } else {
+                    document.getElementById("bmiresult").innerHTML = "Uw heeft een BMI van " + Math.round(bmi * 10) / 10 + ", dit is veel te hoog.";
+                }
+
+                if(geslacht == "man") {
+                    bmr = 66.5 + (13.75 * gewicht) + (5.003 * lengte) - (6.75 * leeftijd);
+                } else {
+                    bmr = 655.1 + (9.563 * gewicht) + (1.850 * lengte) - (4.676 * leeftijd);
+                }
+
+                if(intensiteit == 100) {
+                    var sport = 14 * gewicht;
+                } else if(intensiteit == 75) {
+                    var sport = 11 * gewicht;
+                } else if(intensiteit == 50) {
+                    var sport = 8.8 * gewicht;
+                } else if(intensiteit == 25) {
+                    var sport = 6.8 * gewicht;
+                } else {
+                    var sport = 3.5 * gewicht;
+                }
+
+                var calorieën = bmr + sport;
+
+                document.getElementById("calorieën").innerHTML = "De hoeveelheid verbrande calorieën is " + Math.round(calorieën) + ".";
+
+                if(geslacht == "man" & calorieën > 2500) {
+                    document.getElementById("deficit").innerHTML = "Er is een deficit van " + Math.round(calorieën - 2500) + " calorieën.";
+                } else if(geslacht == "man") {  
+                    document.getElementById("deficit").innerHTML = "Voor een deficit moeten er " + Math.round(2500 - calorieën) + " meer calorieën verbrand worden.";
+                } else if(geslacht == "vrouw" & calorieën > 2000) {
+                    document.getElementById("deficit").innerHTML = "Er is een deficit van " + Math.round(calorieën - 2000) + " calorieën.";
+                } else {
+                    document.getElementById("deficit").innerHTML = "Voor een deficit moeten er " + Math.round(2000 - calorieën) + " meer calorieën verbrand worden.";
+                }
+            });
+
+            function herstart(){
+                localStorage.clear();
+            }
+       </script>
+    </body>
+</html>

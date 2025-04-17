@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+    <!--NAVIGATION-->
+        <nav>
+            <ul>
+                <li><a href="#about" class="a-current">About us</a></li>
+                <li><a href="#training">Train with us</a></li>
+                <li><a href="#community">Our community</a></li>
+                <li><a href="#contact">Contact us</a></li>
+                <li><a href="#booking">Book now</a></li>
+            </ul>
+        </nav>
+    <!--HEADER-->
+        <section class="headerbackground">
+            <div class="headerlogo">
+                <span class="logo"></span>
+                
+            </div>
+        </section>
+    <!--ABOUT US-->
+        <section id="about">
+            <div class="aboutinfo">
+                <h1>
+                    About us
+                </h1>
+                <article>
+                    Providing personal training and group fitness since 2006<br>
+
+                    Train with us in fully equipped, custom built gym in the heart
+                    of the city - in Braddon. We love coaching our clients in a
+                    supportive and motivating training environment, ensuring your
+                    training experience is rewarding and fulfulling.<br>
+
+                    We have a broad range of training options to suit everyone,
+                    including Personal Training, CrossFit and High Intensity
+                    Interval Training (HIIT29). At each session we focus on you!
+                    In personal training appointments we evaluate your strengths
+                    & weaknesses and tailor training programs that meet your needs
+                    and help you reach your fitness goals. Group training options
+                    include CrossFit and HIIT29 are supportive, challenging
+                    and importantly tailored to your fitness level.
+                </article>
+            </div>
+            <div class="aboutslider slideshow-container">
+                <div class="slider slide1">
+                </div>
+                <div class="slider slide2">
+                </div>
+                <div class="slider slide3">
+                </div>
+                <div class="sliderbutton">
+                    <button class="prev" onclick="plusSlides(-1)">❮</button>
+                    <button class="next" onclick="plusSlides(1)">❯</button>
+                </div>
+            </div>
+            </div>
+        </section>
+    <!--TRAINING-->
+        <section id="training">
+            <div class="traininginfo">
+                <h1>Train with us</h1>
+                <article>
+                    What do you want to get out of your training?<br>
+                    Improve your health overall? Hope to lose some weight?
+                    Finally conquer your goal? Perform at your best in your chosen sport
+                    (Elite exercise programming)? Company and support while you get
+                    some regular exercise? There are so many reasons to train with us.<br>
+                    Bottom line - if you want to train with us, we'd love to train with you!
+                </article>
+            </div>
+            <div class="personaltraining">
+                <div class="paneltext">Personal training</div>
+            </div>
+            <div class="hiit29">
+                <div class="paneltext">Hiit29</div>
+            </div>
+            <div class="crossfit">
+                <div class="paneltext">Crossfit</div>
+            </div>
+            <div class="corporatetraining">
+                <div class="paneltext">Corporate training</div>
+            </div>
+            <div class="rehab">
+                <div class="paneltext">Rehab packages</div>
+            </div>
+            <div class="concrete">
+
+            </div>
+        </section>
+    <!--COMMUNITY-->
+        <section id="community">
+            <span class="communitytext">Our Community</span>
+        </section>
+    <!--CONTACT-->
+        <section id="contact">
+            <div class="connect">
+                <span class="connecttext">Connect with us</span>
+            </div>
+            <div class="contactbody">
+                <div class="bodytext">BodytoBurn</div>
+                <button class="bodyf fa fa-facebook"></button>
+                <button class="bodyi fa fa-instagram"></button>
+            </div>
+            <div class="contactcrossfit">
+                <div class="bodytext">Crossfit</div>
+                <button class="crossfitf fa fa-facebook"></button>
+                <button class="crossfiti fa fa-instagram"></button>
+            </div>
+            <div class="contacthiit29">
+                <div class="bodytext">HIIT29</div>
+                <button class="hiit29f fa fa-facebook"></button>
+                <button class="hiit29i fa fa-instagram"></button>
+            </div>
+            <div class="contactus">
+                <h1>Contact us</h1>
+            </div>
+            <div class="contactmap">
+            </div>
+            <div class="mobile">
+                <div class="contactinfo">
+                    <span class="contacttitle">Mobile</span><br>
+                    <span class="contacttext">0408 244 748</span>
+                </div>
+            </div>
+            <div class="email">
+                <div class="contactinfo">
+                    <span class="contacttitle">Email</span><br>
+                    <span class="contacttext">bernie@bodytoburn.com.au</span>
+                </div>
+            </div>
+            <div class="address">
+                <div class="contactinfo">
+                    <span class="contacttitle">Address</span><br>
+                    <span class="contacttext">34 Mort Street</span>
+                </div>
+            </div>
+        </section>
+    <!--FOOTER-->
+        <section id="booking">
+            <div class="bookingcontact">
+                <button class="buttonbb">BB</button>
+                <button class="buttonphone fa fa-phone"></button>
+                <button class="buttonemail fa fa-envelope-o"></button>
+            </div>
+            <div class="booknow">
+                <button class="bookingbutton">Book now</button>
+            </div>
+        </section>
+        <footer>
+            <div class="copyright">©2020 Body to burn</div>
+        </footer>
+        
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("slider");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slides[slideIndex-1].style.display = "block";  
+        }
+        </script>
+    </body>
+</html>

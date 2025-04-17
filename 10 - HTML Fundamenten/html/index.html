@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoofdpagina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/stylesheet.css" />
+    </head>
+    <body>
+        <ul id="navbar">
+            <li onclick="window.open('#', '_self'); return false;">Thuispagina</li>
+            <li onclick="window.open('calculator.html', '_self'); return false;">Calculator</li>
+            <li onclick="window.open('contact.html', '_self'); return false;">Contact</li>
+            <li onclick="window.open('calculator.html', '_self'); return false;">Over ons</li>
+        </ul>
+        <button id="menubtn" onclick="openmenu()">☰ Menu</button>
+        <button id="menubtn2" onclick="sluitmenu()">X Menu</button>
+        <div class="content headerimg">
+        </div>
+        <section class="content">
+            <div class="information">
+            <h3 class="titel">Thuispagina</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Cras nisi tellus, gravida sit amet elit tristique, ultricies ultricies ipsum.
+                Suspendisse interdum leo id nunc interdum, posuere tempor augue pellentesque.
+                Nullam purus enim, maximus id risus at, malesuada porta turpis.
+                Nulla vitae elementum urna. Mauris vel venenatis turpis, nec imperdiet dolor.
+                Sed in eleifend est. Nulla ullamcorper, metus ut fringilla bibendum,
+                nisl metus iaculis nulla, vitae sagittis nulla ipsum sodales velit. Sed ac aliquam augue.
+                Donec sodales dui quam. Etiam consequat, lorem ac dapibus sodales,
+               tortor magna ultricies elit, a pellentesque justo nulla sit amet metus.
+                Duis sed bibendum enim. Vivamus maximus elementum blandit. Nullam ultrices non leo id tincidunt.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+               Pellentesque eu enim risus. Aliquam at lorem eget tellus euismod semper.
+                Nullam vehicula, eros quis malesuada blandit, ante sem pellentesque eros,
+                at mattis lacus arcu vitae enim. Vivamus a accumsan nibh.
+            </div>
+        </section>
+        <div class="footer">
+            <div class="footerposition">
+                <div class="footerinfo">
+                    <h4>Extra informatie</h4>
+                    <ul>
+                        <li>Algemene voorwaarden</li>
+                        <li>Disclaimer</li>
+                        <li>Privacybeleid</li>
+                    </ul>
+                </div>
+                <div class="footercontact">
+                    <h4>Contactinfo</h4>
+                    <ul>
+                        <li>01-23456789</li>
+                        <li>sport@school.nl</li>
+                        <li>Tw/FB</li>
+                    </ul>
+                </div>
+                <div class="footerlocatie">
+                    <h4>Locatie</h4>
+                    <ul>
+                        <li>Heerhugowaard</li>
+                        <li>Stationsplein 01</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>
+            function openmenu(){
+                document.getElementById("navbar").style.width = "50%";
+                document.getElementById("menubtn2").style.visibility = "visible";
+            }
+
+            function sluitmenu(){
+                document.getElementById("navbar").style.width = "0";
+                document.getElementById("menubtn2").style.visibility = "hidden";
+            }
+        </script>
+    </body>
+</html>

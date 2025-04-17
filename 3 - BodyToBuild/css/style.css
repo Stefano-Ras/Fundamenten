@@ -1,0 +1,558 @@
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body > section{
+    box-shadow: 0 5px 5px 0 #272722;
+}
+
+h1{
+    font-weight: normal;
+}
+
+nav{
+    background-color: #EC644A;
+    box-shadow: 0 5px 5px 0 #272722;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+}
+
+nav ul{
+    display: flex;
+    margin: auto;
+}
+
+nav li{
+    padding: 20px;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+nav a{
+    color: #F29C8C;
+}
+
+nav a:hover{
+    color:#FCFBFB;
+}
+
+nav a:link{
+    text-decoration: none;
+}
+
+.headerbackground{
+    background-image: url(../images/header.jpg);
+    background-size: cover;
+    height: 566px;
+    padding-top: 59px;
+}
+
+.logo{
+    background-image: url(../images/icons/logo.png);
+    height: 40px;
+}
+
+#about{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+
+.aboutinfo{
+    background-color: #4A4A4A;
+    color: #FCFBFB;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 0 1 50%;
+    padding: 50px;
+}
+
+.aboutslider{
+    flex: 0 1 50%;
+    background-size: cover;
+}
+
+.sliderbutton{
+    display: flex;
+    justify-content: right;
+}
+
+.prev, .next {
+    display: flex;
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+    border-radius: 100%;
+    border-color: rgba(0, 0, 0, 0);
+    background-color: #EC644A;
+    margin-top: -50px;
+    margin-right: 25px;
+    position: absolute;
+}
+
+.prev{
+    margin-top: -100px;
+}
+
+.slider{
+    display: none;
+    height: 100%;
+    background-size: cover;
+}
+
+.slide1{
+    background-image: url(../images/studio01-1600x1600.jpg);
+    height: 100%;
+}
+
+.slide2{
+    background-image: url(../images/studio02-1600x1600.jpg);
+    height: 100%;
+}
+
+.slide3{
+    background-image: url(../images/studio03-1600x1600.jpg);
+    height: 100%;
+}
+
+#training{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.traininginfo{
+    background-color: #4A4A4A;
+    color: #FCFBFB;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 0 1 50%;
+    padding: 50px;
+}
+
+.aboutinfo h1, .traininginfo h1{
+    font-size: 2em;
+    margin-top: 0;
+    color: #B1B2B4;
+}
+
+.personaltraining, .hiit29, .crossfit, .corporatetraining, .rehab{
+    flex: 1 1 25%;
+    height: auto;
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    display: grid;
+    align-items: end;
+}
+
+.paneltext{
+    display: flex;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #4A4A4A;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.personaltraining{
+    background-color: #ECECEC;
+    background-image: url(../images/svg/stopwatch.svg);
+}
+
+.hiit29{
+    background-color: #E4E4E4;
+    background-image: url(../images/svg/power.svg);
+}
+
+.crossfit{
+    background-color: #E4E4E4;
+    background-image: url(../images/svg/dumbbell.svg);
+}
+
+.corporatetraining{
+    background-color: #ECECEC;
+    background-image: url(../images/svg/tie.svg);
+}
+
+.rehab{
+    background-color: #E4E4E4;
+    background-image: url(../images/svg/first-aid-kit.svg);
+}
+
+.concrete{
+    flex: 1 1 25%;
+    height: 300px;
+    background-image: url(../images/b2b_concrete.jpg);
+}
+
+#community{
+    display: flex;
+    background-color:#EC644A;
+    height: 300px;
+    justify-content: center;
+}
+
+.communitytext{
+    font-size: 2em;
+    color:#ECECEC;
+    display: flex;
+    align-items: center;
+}
+
+#contact{
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: none;
+}
+
+.connect, .contactbody, .contactcrossfit, .contacthiit29, .mobile, .email, .address{
+    flex: 1 0 25%;
+    height: 300px;
+}
+
+.connect{
+    background-color: #B1B2B4;
+    color:#4A4A4A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.bodytext{
+    grid-area: text;
+}
+
+.fa-facebook{
+    grid-area: left;
+}
+
+.fa-instagram{
+    grid-area: right;
+}
+
+.contactbody, .contactcrossfit, .contacthiit29{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.bodytext{
+    justify-content: left;
+    flex: 1 0 100%;
+    margin-top: -100px;
+    padding-left: 25px;
+}
+/*
+.contactbody, .contactcrossfit, .contacthiit29{
+    display: grid;
+    grid-template-areas: 
+    'text . .'
+    'left . right'
+    '. . .';
+    align-items: center;
+    justify-content: center;
+}
+*/
+
+.contactbody{
+    background-color: #363636;
+    color: #E4E4E4;
+}
+
+.contactcrossfit{
+    background-color: #232323;
+    color: #E4E4E4;
+}
+
+.contacthiit29{
+    background-color: #FFD802;
+}
+
+.contactus{
+    background-color: #4A4A4A;
+    color: #B1B2B4;
+    text-transform: capitalize;
+    font-size: 1.5em;
+    display: flex;
+    flex: 1 1 50%;
+    height: 300px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.contactmap{
+    flex: 1 1 50%;
+    background-image: url(../images/maps/B2B\ map.png);
+    background-size: cover;
+}
+
+.bodyf, .bodyi, .crossfitf, .crossfiti, .hiit29f, .hiit29i{
+    flex-wrap: nowrap;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 100%;
+    padding: 20px;
+    font-size: 1.75em;
+}
+
+.bodyf{
+    background-color: #EC644A;
+    color:#363636;
+    margin-right: 20px;
+}
+
+.bodyi{
+    background-color: #EC644A;
+    color: #363636;
+}
+
+.crossfitf{
+    background-color: #F29C8C;
+    color:#232323;
+    margin-right: 20px;
+}
+
+.crossfiti{
+    background-color: #F29C8C;
+    color:#232323;
+}
+
+.hiit29f{
+    background-color: #232323;
+    color:#FFD802;
+    margin-right: 20px;
+}
+
+.hiit29i{
+    background-color: #232323;
+    color:#FFD802;
+}
+
+.fa .fa-facebook{
+    padding: 0 5.14px 0 5.14px;
+}
+
+.mobile, .email, .address{
+    background-position: center;
+    background-size: 20%;
+    background-repeat: no-repeat;
+    flex: 1 1 33%;
+    height: 300px;
+}
+
+.mobile{
+    background-color: #E4E4E4;
+    background-image: url(../images/svg/power.svg);
+}
+
+.email{
+    background-color: #ECECEC;
+    background-image: url(../images/svg/power.svg);
+}
+
+.address{
+    background-color: #E4E4E4;
+    background-image: url(../images/svg/power.svg);
+}
+
+.contactinfo{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 20px 0 0 20px;
+}
+
+.contacttitle{
+    color: #EC644A;
+}
+
+.contacttext{
+    color: #4A4A4A;
+}
+
+#booking{
+    display: flex;
+    flex: 1 1 100%;
+    background-color: #EC644A;
+    height: 100px;
+    align-items: center;
+    box-shadow: none;
+}
+
+.bookingcontact{
+    flex: 1 1 75%;
+}
+
+.buttonbb{
+    background-color: white;
+    border: white;
+    border-radius: 100%;
+    color:#EC644A;
+    text-transform: uppercase;
+    padding: 15px;
+    margin-left: 25px;
+}
+
+.buttonbb::first-letter{
+    font-weight: bold;
+}
+
+.buttonphone, .buttonemail{
+    background-color: #F29C8C;
+    border: #F29C8C;
+    border-radius: 100%;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px;
+    margin-left: 10px;
+    background-image: url(../images/svg/power.svg);
+}
+
+.bookingbutton{
+    flex: 1 1 25%;
+    background-color: white;
+    color:#EC644A;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: white;
+    border-radius: 35px;
+    padding: 15px 25px 15px 25px;
+    margin-right: 25px;
+}
+
+.copyright{
+    margin: 10px 25px 10px 0;
+    color:#B1B2B4;
+    font-size: 0.8em;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+@media (max-width: 750px){
+    .traininginfo{
+        flex: 1 0 100%;
+    }
+
+    .personaltraining, .hiit29, .crossfit, .corporatetraining, .rehab, .concrete{
+        flex: 1 0 33%;
+        height: 300px;
+    }
+
+    .connect, .contactbody, .contactcrossfit, .contacthiit29{
+        flex: 1 0 50%;
+    }
+}
+
+@media (max-width: 500px){
+
+    body{
+        text-align: center;
+    }
+
+    nav{
+        position: relative;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav li{
+        flex: 1 0 100%
+    }
+
+    .headerbackground{
+        background-position: center;
+    }
+
+    #about{
+        flex-wrap: wrap;
+    }
+
+    .aboutinfo, .aboutslider, .traininginfo{
+        flex: 1 0 100%;
+    }
+
+    .aboutinfo, .traininginfo{
+        padding: 20px;
+    }
+
+    .aboutinfo h1, .traininginfo h1{
+        margin-top: 0;
+    }
+
+    .aboutslider{
+        height: 500px;
+    }
+
+    .sliderbutton{
+        justify-content: space-between;
+    }
+
+    .prev{
+        margin-left: 25px;
+    }
+
+    .prev, .next{
+        margin-top: -500px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .personaltraining, .hiit29, .crossfit, .corporatetraining, .rehab, .concrete{
+        flex: 1 0 50%;
+    }
+
+    .contactbody, .contactcrossfit, .contacthiit29{
+        flex: 1 0 100%;
+    }
+
+    .contactus, .contactmap, .mobile, .email, .address{
+        flex: 1 0 100%;
+    }
+
+    .contactbody, .contactcrossfit, .contacthiit29{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .bodytext{
+        flex: 1 0 100%;
+        padding-bottom: 25px;
+    }
+}

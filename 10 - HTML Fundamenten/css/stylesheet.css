@@ -1,0 +1,408 @@
+/*
+    Black:  #262626
+    White:  #F5F5F5
+    Grey:   #303630
+    Yellow: #FAB815
+    Blue:   #258EA6
+*/
+
+*{
+    font-family: Helvetica, sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: gray;
+}
+
+#navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    background-color: #262626;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 100%;
+}
+
+#navbar li{
+    display: flex;
+    flex: 1 1 100%;
+    align-items: center;
+    justify-content: center;
+    border-top: #F5F5F5 1px;
+    color: #FAB815;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 2px 2px black;
+    cursor: pointer;
+}
+
+#navbar li:hover{
+    background-color: gray;
+}
+
+#menubtn{
+    visibility: hidden;
+    position: fixed;
+    background-color: #262626;
+    color: #FAB815;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+}
+
+#menubtn2{
+    visibility: hidden;
+    position: fixed;
+    right: 0;
+    background-color: #262626;
+    color: #FAB815;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+}
+
+.content{
+    margin-left: 15%;
+}
+
+/*-----------------------------------------------HOOFDPAGINA-------------------------------------------------*/
+
+.titel{
+    margin-top: 0;
+}
+
+.information{
+    padding: 25px;
+    background-color: #F5F5F5;
+}
+
+.headerimg{
+    background-image: url(../images/header.jpg);
+    background-size: cover;
+    height: 500px;
+}
+
+/*------------------------------------------------CALCULATOR-------------------------------------------------*/
+
+.calculator{
+    display: flex;
+    height: 100vh;
+}
+
+.input{
+    background-color: gray;
+    flex: 1 1 50%;
+    padding-bottom: 40px;
+}
+  
+.output{
+    flex: 1 1 50%;
+    background-color: darkgray;
+    padding: 15px;
+}
+
+.bmiform, .bmrform{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bmiinput, .bmrinput, .intensityinput{
+    background-color: gray;
+    padding: 15px;
+}
+
+.sportinput{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sportinput h3{
+    padding-left: 15px;
+}
+
+.sportform{
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+datalist{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    writing-mode: vertical-rl;
+    width: 90%;
+    text-align: left;
+    margin: auto;
+}
+  
+option{
+    padding: 0;
+}
+
+#lengte, #gewicht, #geslacht, #leeftijd{
+    background: none;
+    border: 0;
+    border-bottom: #FAB815 solid 2px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#lengte:hover, #gewicht:hover, #geslacht:hover, #leeftijd:hover{
+    background: #F5F5F5;
+}
+
+#lengte:focus, #gewicht:focus, #geslacht:focus, #leeftijd:focus{
+    background: #F5F5F5;
+}
+
+#geslacht, #leeftijd{
+    height: 100%;
+    margin: 0 5px;
+    width: 50px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.dropdownoptie{
+    background: #FAB815;
+    color: black;
+    font-weight: bold;
+}
+
+.dropdownoptie:hover{
+    text-decoration: none;
+}
+
+::placeholder{
+    color: black;
+}
+
+
+input[type="range"]{
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 90%;
+}
+
+input[type="range"]:focus{
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track{
+    background-color: #FAB815;
+    height: 0.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -4px;
+    background-color: #FAB815;
+    height: 1rem;
+    width: 1rem;
+    transform: rotate(45deg);
+}
+
+input[type="range"]::-moz-range-track{
+    background-color: #FAB815;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+}
+  
+input[type="range"]::-moz-range-thumb{
+    background-color: #FAB815;
+    border: none;
+    appearance: none;
+    margin-top: -4px;
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+    transform: rotate(45deg);
+}
+
+input[type="range"]:focus::-moz-range-thumb{
+    outline: 3px solid #FAB815;
+    outline-offset: 0.125rem;
+}
+
+#herstart{
+    border: none;
+    background: #FAB815;
+    color: #262626;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 5px 10px;
+}
+
+#herstart:hover{
+    cursor: pointer;
+}
+
+#herstart:active{
+    background: #262626;
+    color: #FAB815;
+}
+
+/*--------------------------------------------------CONTACT--------------------------------------------------*/
+
+.contact{
+    padding: 15px;
+    height: 100vh;
+}
+
+.contact label{
+    display: block;
+    padding: 5px 0;
+}
+
+.voornaam, .achternaam, .vraag{
+    width: 50%;
+    background: none;
+    border: 0;
+    border-bottom: 3px solid #FAB815;
+    border-right: 3px solid gray;
+}
+
+.voornaam:hover, .achternaam:hover, .vraag:hover{
+    background: #F5F5F5;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+    background-color: #F5F5F5;
+}
+
+input[type="range"]:focus{
+    background: none;
+}
+
+.vraag{
+    resize: none;
+}
+
+.verstuur{
+    display: block;
+    width: 50%;
+    border: none;
+    background: #FAB815;
+    color: #262626;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 5px 10px;
+}
+
+.verstuur:hover{
+    cursor: pointer;
+}
+
+.verstuur:active{
+    background: #262626;
+    color: #FAB815;
+}
+
+/*--------------------------------------------------FOOTER---------------------------------------------------*/
+
+.footer{
+    background-color: #262626;
+}
+
+.footerposition{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.footerposition div{
+    margin: 0 10px 0 10px;
+}
+
+.footer h4{
+    color: #FAB815;
+}
+
+.footer ul{
+    list-style: none;
+    padding: 0;
+    color: #F5F5F5;
+}
+
+.footer li{
+    padding-bottom: 5px;
+}
+
+@media (max-width: 400px){
+    #navbar{
+        flex: 1 0 100%;
+        z-index: 1;
+        width: 0;
+        overflow-x: hidden;
+    }
+
+    #menubtn{
+        visibility: visible;
+    }
+
+    .content{
+        margin-left: 0;
+        padding-top: 20px;
+    }
+    
+    .information, .output, .contact{
+        padding-bottom: 50px;
+    }
+
+    .calculator{
+        height: 100%;
+        display: block;
+    }
+
+    .bmiform{
+        flex-wrap: nowrap;
+    }
+
+    #lengte, #gewicht{
+        width: 50%;
+    }
+
+    #geslacht, #leeftijd{
+        width: 20%;
+    }
+
+    #lengte, #gewicht, #geslacht, #leeftijd{
+        font-size: 1.2em;
+    }
+
+    .contact{
+        height: 100%;
+    }
+
+    .voornaam, .achternaam, .vraag{
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+    .verstuur{
+        width: 100%;
+    }
+
+    .footerposition div{
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,33 @@
+body{
+  font-family:Helvetica,  Arial, sans-serif;
+  font-size: 10pt;
+  width: 70%;
+  margin: auto;
+  padding: 0;
+}
+
+.header{
+  text-align: center;
+}
+
+.image{
+  width: 100%;
+}
+
+.navbar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navlist{
+  float: left;
+  text-align: center;
+}
+
+.navlist a{
+  display: block;
+  text-align: center;
+  padding: 10px;
+}

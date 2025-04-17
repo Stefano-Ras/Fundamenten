@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoofdpagina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/stylesheet.css" />
+    </head>
+    <body>
+        <ul id="navbar">
+            <li onclick="window.open('index.html', '_self'); return false;">Thuispagina</li>
+            <li onclick="window.open('calculator.html', '_self'); return false;">Calculator</li>
+            <li onclick="window.open('#', '_self'); return false;">Contact</li>
+            <li onclick="window.open('calculator.html', '_self'); return false;">Over ons</li>
+        </ul>
+        <button id="menubtn" onclick="openmenu()">☰ Menu</button>
+        <button id="menubtn2" onclick="sluitmenu()">X Menu</button>
+        <section class="content">
+            <div class="contact">
+                <h3 class="contactheader">Voor vragen, opmerkingen of klachten</h3>
+                <label for="voornaam">Voornaam</label>
+                <input type="text" class="voornaam" placeholder="Voornaam">
+                <label for="achternaam">Achternaam</label>
+                <input type="text" class="achternaam" placeholder="Achternaam">
+                <label for ="vraag">Uw vraag, opmerking of klacht</label>
+                <textarea rows="7" class="vraag" placeholder="Stel uw vraag"></textarea>
+                <input type="submit" class="verstuur" value="Verstuur">
+            </div>
+        </section>
+        <div class="footer">
+            <div class="footerposition">
+                <div class="footerinfo">
+                    <h4>Extra informatie</h4>
+                    <ul>
+                        <li>Algemene voorwaarden</li>
+                        <li>Disclaimer</li>
+                        <li>Privacybeleid</li>
+                    </ul>
+                </div>
+                <div class="footercontact">
+                    <h4>Contactinfo</h4>
+                    <ul>
+                        <li>01-23456789</li>
+                        <li>sport@school.nl</li>
+                        <li>Tw/FB</li>
+                    </ul>
+                </div>
+                <div class="footerlocatie">
+                    <h4>Locatie</h4>
+                    <ul>
+                        <li>Heerhugowaard</li>
+                        <li>Stationsplein 01</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>
+            function openmenu(){
+                document.getElementById("navbar").style.width = "50%";
+                document.getElementById("menubtn2").style.visibility = "visible";
+            }
+
+            function sluitmenu(){
+                document.getElementById("navbar").style.width = "0";
+                document.getElementById("menubtn2").style.visibility = "hidden";
+            }
+        </script>
+    </body>
+</html>

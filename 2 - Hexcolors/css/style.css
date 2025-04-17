@@ -1,0 +1,261 @@
+/*ALGEMEEN*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.title{
+    flex: 1 1 80%;
+    min-width: 100px;
+    font-family: 'Lobster Two', cursive;
+    font-style: italic;
+    font-size: 20px;
+    padding: 0 0 0 25px;
+}
+
+nav{
+    background-color: #282727;
+    color: #FCFBFB;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+    list-style: none;
+}
+
+nav li a{
+    padding: 0 25px 0 25px;
+}
+
+nav li a:link{
+    color: #FCFBFB;
+    text-decoration: none;
+}
+
+nav li a:visited{
+    color: #FCFBFB;
+}
+/*HEADER*/
+.backgroundmain, .backgroundcontact{
+    background-size: cover;
+    height: 575px;
+    display: flex;
+    align-items: center;
+}
+
+.backgroundmain{
+    background-image: url(../images/background.jpg);
+}
+
+.backgroundcontact{
+    background-image: url(../images/background2.jpg);
+}
+
+.intro-text{
+    max-width: 50%;
+    background-color: #272727;
+}
+
+.intro-textcontact{
+    max-width: 50%;
+    background-color: #272727;
+}
+
+.intro-textcontact h1{
+    max-width: 50%;
+    color: #5542C9;
+    padding: 50px 25px 12.5px 25px;
+    margin: 0;
+}
+
+.intro-textcontact p{
+    color: #FCFBFB;
+    padding: 0 25px 50px 25px;
+    margin: 0;
+}
+
+.intro-text h1{
+    color: #CD00D1;
+    padding: 50px 25px 12.5px 25px;
+    margin: 0;
+}
+
+.intro-text p{
+    color: #FCFBFB;
+    padding: 0 25px 50px 25px;
+    margin: 0;
+}
+
+/*SITE CONTENT*/
+.content{
+    height: 200px;
+    width: 80%;
+    margin: auto;
+}
+
+.content h1{
+    font-family: 'Lobster Two', cursive;
+}
+
+.explain{
+    text-align: center;
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+/*HOOFDPAGINA*/
+.procon{
+    display: flex;
+    align-items: center;
+}
+
+.pro{
+    background-image: linear-gradient(to bottom right, #C4C3C3, #E7E3E3);
+    width: 100vw;
+    padding: 0 0 0 20%;
+}
+
+.con{
+    background-image: linear-gradient(to bottom right, #E7E3E3, #C4C3C3);
+    width: 100vw;
+    padding: 0 20% 0 0;
+}
+
+.colorpicker{
+    display: flex;
+    flex: 1 0 100%;
+    align-items: center;
+}
+
+.colortext{
+    width: 67%;
+}
+
+.colorimg{
+    width: 290px;
+    height: 170px;
+}
+
+/*CONTACT*/
+.map{
+    background-color: grey;
+}
+
+.map iframe{
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.contactinfo{
+    text-align: center;
+}
+
+/*HEXCOLOR*/
+.hexbackground{
+    background-color: #C4C3C3;
+}
+
+.hexpicker{
+    text-align: center;
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.hex{
+    padding: 0 0 0 20%;
+}
+
+.rgb{
+    padding: 0 20% 0 0;
+}
+
+.table{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tabletitle{
+    flex: 1 0 100%;
+    text-align: center;
+}
+
+.tableleft{
+    margin: auto;
+    padding: 0 0 0 20%;
+}
+
+.tableright{
+    margin: auto;
+    padding: 0 20% 0 0;
+}
+
+.generator .content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.generator h1{
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.generator button{
+    margin: auto;
+    padding: 0;
+    /*color:rgb(255, 255, 255);
+    border:1px rgb(255, 255, 255);
+    background:rgba(0, 0, 0, 0.2);*/
+}
+
+#color{
+    margin: auto;
+}
+
+/*FOOTER*/
+footer{
+    background-color: #444444;
+    display: flex;
+    color:#FCFBFB;
+}
+
+footer .content{
+    justify-content: center;
+    align-items: center;
+}
+
+footer :first-child{
+    display: flex;
+    padding: 0 20px 0 0;
+}
+
+footer h2{
+    font-family: 'Lobster Two', cursive;
+    border-right: #FCFBFB 1 px;
+}
+
+footer div ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footerlinks{
+    padding: 0 0 0 20px;
+}

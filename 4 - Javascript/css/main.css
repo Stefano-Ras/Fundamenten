@@ -1,0 +1,37 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    text-align: center;
+}
+
+.container h2{
+    cursor: default;
+}
+
+#quote{
+    font-size: 1.5em;
+}
+
+#hexcolour, #quote, #quoteauthor{
+    margin: 10px 0 10px 0;
+}
+
+#changecolourbutton{
+    height: 100px;
+    width: 250px;
+    border: none;
+}
+
+#quote{
+    font-size: 1.2em;
+    font-weight: bold;
+}
